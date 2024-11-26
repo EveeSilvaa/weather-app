@@ -18,7 +18,7 @@ const App = () => {
     <div className="weather-section">
       <div className="current-weather">
         <img src="src/icons/clouds.svg" className="weather-icon" />
-        <h2 className="temperatura">
+        <h2 className="temperature">
           20<span>°C</span>
         </h2>
         <p className="description">Partly cloundy</p>
@@ -46,6 +46,26 @@ const App = () => {
           <p className="time">00:00</p>
           <img src="src/icons/clouds.svg" className="weather-icon" />
           <p className="temperature">50°</p>
+          </li>
+          <li className="weather-item">
+          <p className="time">00:00</p>
+          <img src="src/icons/clouds.svg" className="weather-icon" />
+          <p className="temperature">0°</p>
+          </li>
+          <li className="weather-item">
+          <p className="time">00:00</p>
+          <img src="src/icons/clouds.svg" className="weather-icon" />
+          <p className="temperature">0°</p>
+          </li>
+          <li className="weather-item">
+          <p className="time">00:00</p>
+          <img src="src/icons/clouds.svg" className="weather-icon" />
+          <p className="temperature">0°</p>
+          </li>
+          <li className="weather-item">
+          <p className="time">00:00</p>
+          <img src="src/icons/clouds.svg" className="weather-icon" />
+          <p className="temperature">0°</p>
           </li>
           <li className="weather-item">
           <p className="time">00:00</p>
