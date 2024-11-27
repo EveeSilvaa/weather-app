@@ -21,23 +21,38 @@ body {
 }
 
 .container {
+  position: relative;
+  overflow: hidden;
   margin: 0 auto;
+  z-index: 1;
   max-width: 410px;
   border-radius: 10px;
   background: linear-gradient(#e9bc69, #94deef);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* .container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url("bg.png");
+} */
+
 .search-section {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 25px;
+  padding: 23px;
 }
 
 .search-section .search-form {
   height: 54px;
   width: 100%;
+  position: relative;
 }
 
 .search-section .search-form span {
@@ -104,7 +119,7 @@ body {
 }
 
 .current-weather .weather-icon {
-  width: 140px;
+  width: 180px;
   aspect-ratio: 1;
 }
 
@@ -136,7 +151,7 @@ body {
 
 .hourly-forecast .weather-list {
   display: flex;
-  gap: 34px;
+  gap: 32px;
   overflow-x: auto;
   list-style: none;
   scrollbar-width: thin;
@@ -147,6 +162,13 @@ body {
 
 .hourly-forecast:hover .weather-list {
   scrollbar-color: #eb8b8b transparent;
+}
+
+.hourly-forecast:hover .weather-item {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hourly-forecast .weather-item .weather-icon {
