@@ -1,4 +1,4 @@
-const CurrentWeather = ({currentWeather}) => {
+const CurrentWeather = ({ currentWeather }) => {
   return (
     <div className="current-weather">
         <img src={`icons/${currentWeather.weatherIcon}.svg`} className="weather-icon" />

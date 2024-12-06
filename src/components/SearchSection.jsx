@@ -2,7 +2,7 @@ const SearchSection = ({ getWeatherDeatails }) => {
     const API_KEY = import.meta.env.VITE_API_KEY;
 
     
-    // handles city search form submission //
+    // lida com o envio do formulário de pesquisa de cidade //
     const handleCitySearch = (e) => {
         e.preventDefault();
         const searchInput = e.target.querySelector(".search-input");

@@ -5,20 +5,21 @@ import HourlyWeatherItem from "./components/HourlyWeatherItem";
 import { weatherCodes } from "./constants";
 
 const App = () => {
-  const [CurrentWeather, setCurrentWeather] = useState({});
+  const [currentWeather, setCurrentWeather] = useState({});
 
-  //Fetches weather details based on the API url
+  //Busca detalhes meteorológicos com base no URL da API
   const getWeatherDeatails = async (API_URL) => {
     try {
       const response = await fetch(API_URL);
       const data = await response.json();
       
-      // extract current weather data
+      // extrair dados meteorológicos atuais
       const temperature = Math.floor(data.current.temp_c);
       const description = data.current.condition.text;
-      const weatherIcon = Object.keys(weatherCodes).find(icon => weatherCodes[icon].includes(data.current.condition.code));
+      const weatherIcon = Object.keys(weatherCodes).find((icon) => weatherCodes[icon].includes(data.
+      current.condition.code));
 
-      setCurrentWeather({temperature, description, weatherIcon});
+      setCurrentWeather({ temperature, description, weatherIcon });
     } catch (error) {
       console.log(error);
     }
@@ -27,14 +28,14 @@ const App = () => {
 
   return (
     <div className="container">
-     {/* search section */}
+     {/* seção de pesquisa */}
     <SearchSection getWeatherDeatails={getWeatherDeatails}/>
 
-    {/* search section */}
+    {/* seção de pesquisa */}
     <div className="weather-section">
-      <CurrentWeather currentWeather={ CurrentWeather }/>
+      <CurrentWeather currentWeather={currentWeather}/>
 
-    {/* hourly weather forecast list */}
+    {/* lista de previsão do tempo por hora */}
       <div className="hourly-forecast">
         <ul className="weather-list">
          <HourlyWeatherItem/>
