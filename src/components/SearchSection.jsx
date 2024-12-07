@@ -12,13 +12,13 @@ const SearchSection = ({ getWeatherDeatails, searchInputref }) => {
   };
 
 
-  // gets user´s current location (latitude/ longitude)
+  // obtém a localização atual do usuário (latitude/ longitude)
   const handleLocationSearch = () => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const {latitude, longitude} = position.coords;
         const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${longitude},${latitude}&days=2`;
-        getWeatherDeatails(API_URL); // fetches weather details for the user´s current location
+        getWeatherDeatails(API_URL); // busca detalhes meteorológicos para a localização atual do usuário
       },
       () => {
         alert("Location acces denied. Please enable permissions to use this feature.");

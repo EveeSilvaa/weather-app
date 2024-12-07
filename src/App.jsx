@@ -49,7 +49,7 @@ const App = () => {
       searchInputref.current.value = data.location.name;
       filterHourlyForecast(combinedHourlyData);
     } catch {
-      //set sethasnoresults state if there`s an error
+      //definir o estado sethasnoresults se houver um erro
       setHasNoResults(true);
     }
   };
@@ -60,7 +60,7 @@ const App = () => {
      {/* seção de pesquisa */}
     <SearchSection getWeatherDeatails={getWeatherDeatails} searchInputref={searchInputref} />
 
-     {/* conditionaly render based on hasNoResults state */}
+     {/* renderização condicional com base no estado hasNoResults */}
     {hasNoResults ? (
       <NoResultsDiv />
     ) : (
